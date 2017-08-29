@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+     
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+</head>
+<body>
+
+
+<!--<table>-->
+    <!--<th:block th:each="director:${newdir}">-->
+        <!--<tr>-->
+
+            <!--<td><p th:text="'Director Name ' + ${director.name}"/></td>-->
+            <!---->
+    <!--</th:block>-->
+<!--</table>-->
+
+<form action="#" th:action="@{/addmovie/{id}}" th:object="${newmovie}" method="post" >
+ <input type="hidden" th:field="*{id}" />
+ <p><h4>Title</h4> <input type="text" th:field="*{title}"></p>
+ <p>  <h4> Year  </h4> <input type="text" th:field="*{year}"/></p
+  <p>  <h4> Description  </h4> <input type="text" th:field="*{description}"/></p>
+    <p>  <h4> Director  </h4> <input type="text" th:field="*{director.id}"/></p>
+
+    <input type="submit"  value="Save" class="btn btn-lg btn-default btn-block" />
+</form>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
+ 
